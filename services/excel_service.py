@@ -9,7 +9,4 @@ class ExcelService:
 
     def save(self, df, file):
 
-        df.to_excel(
-            file,
-            index=False
-        )
+        df.to_excel(file, index=False )
