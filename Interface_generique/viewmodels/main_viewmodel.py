@@ -1,7 +1,7 @@
 from PyQt6.QtCore import QObject
 from PyQt6.QtCore import pyqtSignal
 
-from workers.worker import Worker
+from Interface_generique.workers.worker import Worker
 
 
 class MainViewModel(QObject):

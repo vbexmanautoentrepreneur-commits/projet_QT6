@@ -1,20 +1,11 @@
-from PyQt6.QtCore import QObject
-from PyQt6.QtCore import pyqtSignal
-from PyQt6.QtCore import QRunnable
-from PyQt6.QtCore import QThreadPool
-
+from PyQt6.QtCore import QObject, pyqtSignal, QRunnable,QThreadPool
 
 class WorkerSignals(QObject):
-
     finished = pyqtSignal(object)
-
     error = pyqtSignal(str)
 
-
 class Worker(QRunnable):
-
     pool = QThreadPool.globalInstance()
-
     def __init__(self, fn, *args, **kwargs):
 
         super().__init__()
